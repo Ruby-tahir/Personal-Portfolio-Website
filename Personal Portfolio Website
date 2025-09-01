@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruby Tahir | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family:"Tim New Roman", Times, serif;
+      background: #f4faff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1e3d58;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 50px;
+      position: sticky;
+      top: 0;
+    }
+    header h2 {
+      font-size: 20px;
+      color: #aee1f9;
+      letter-spacing: 1px;
+    }
+    nav a {
+      color: #e6f9ff;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 15px;
+      transition: .3s;
+    }
+    nav a:hover {
+      color: #ffd369;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 25px;
+      background: #13334c;
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #ffd369;
+    }
+    .hero p {
+      color: #d8f3ff;
+      font-size: 15px;
+    }
+
+    section {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 60px 30px;
+    }
+    section h3 {
+      text-align: center;
+      color: #1e3d58;
+      margin-bottom: 25px;
+      font-size: 22px;
+    }
+
+    .about p {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+      color: #444;
+      font-size: 15px;
+    }
+
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      list-style: none;
+    }
+    .skills li {
+      background: #aee1f9;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-size: 14px;
+      color: #13334c;
+      font-weight: bold;
+    }
+
+    .projects .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #d8f3ff;
+      transition: .3s;
+    }
+    .box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+    }
+    .box h4 {
+      margin-bottom: 8px;
+      font-size: 17px;
+      color: #13334c;
+    }
+    .box p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 550px;
+      margin: auto;
+    }
+    .contact input, 
+    .contact textarea {
+      padding: 12px;
+      background: #e6f9ff;
+      border: 1px solid #aee1f9;
+      border-radius: 6px;
+      color: #13334c;
+      font-size: 14px;
+    }
+    .contact button {
+      background: #1e3d58;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #fff;
+      transition: .3s;
+    }
+    .contact button:hover {
+      background: #13334c;
+    }
+
+    footer {
+      text-align: center;
+      background: #1e3d58;
+      padding: 20px;
+      font-size: 13px;
+      margin-top: 40px;
+      color: #d8f3ff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Ruby Tahir</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hello, I'm Ruby Tahir</h1>
+    <p>Beginner Web Developer · Tech Learner · Creative Explorer</p>
+  </section>
+
+  <section id="about" class="about">
+    <h3>About Me</h3>
+    <p>
+      I enjoy creating websites using <strong>HTML</strong> and <strong>CSS</strong>.  
+      Currently, I am learning <strong>Java</strong>, <strong>C</strong>, and <strong>C++</strong>.  
+      I love solving problems and exploring new ideas to grow in my coding journey.
+    </p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h3>Skills</h3>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Java</li>
+      <li>C</li>
+      <li>C++</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects">
+    <h3>Projects</h3>
+    <div class="grid">
+      <div class="box">
+        <h4>Portfolio Website</h4>
+        <p>A personal portfolio site to showcase my skills and work.</p>
+      </div>
+      <div class="box">
+        <h4>Login Page</h4>
+        <p>A simple login form design built with HTML & CSS.</p>
+      </div>
+      <div class="box">
+        <h4>Landing Page</h4>
+        <p>A clean and modern landing page layout.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h3>Contact Me</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Ruby Tahir.
+  </footer>
+
+</body>
+</html>
